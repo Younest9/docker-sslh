@@ -12,7 +12,7 @@ RUN a2ensite myapp.conf
 RUN service apache2 restart
 
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
-RUN echo 'root: ' | chpasswd
+RUN echo 'root:password' | chpasswd
 RUN service ssh restart
 
 EXPOSE 443
