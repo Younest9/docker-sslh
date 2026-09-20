@@ -9,7 +9,7 @@ SSH traffic routed through https port 443 (ssh over https)
 
 Clone this repository:
 ```bash
-git clone https://github.com/younest9/docker-sslh.git
+git clone https://github.com/Younest9/docker-sslh.git
 ```
 
 Install git if not installed:
@@ -57,7 +57,7 @@ dnf install docker.io -y
 ```
 Now, you should see the image that you built named `sslh` by simply typing this command:
 ```bash
-docker images ls
+docker images
 ```
 
 ### Deploy a container
@@ -86,7 +86,7 @@ docker logs -f sslh
 
 ### Access the container
 
-Now that you have a container running theb image that you built, you can ssh to the container via https (port 443)
+Now that you have a container running the image that you built, you can ssh to the container via https (port 443)
 To do that:
 ```bash
 ssh root@localhost -p 443 # default user is root, and default password is password
@@ -149,3 +149,11 @@ Now that you image has been tagged the right way, you can push it:
    
    
 Credits (Idea): [yrutschle/sslh](https://github.com/yrutschle/sslh)
+
+## Security
+
+**Lab / demo only.** Default image uses `root` with password `password` over the muxed port. Change credentials before any real use; do not expose this image to the public internet as shipped.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
